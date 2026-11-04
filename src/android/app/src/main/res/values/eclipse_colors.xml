@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Azahar Eclipse palette: white, pearl gray and blue.
+        Defined only in values/ (no night variant): the Eclipse theme is light-only.
+    -->
+
+    <!-- Primary: Eclipse blue -->
+    <color name="eclipse_primary">#1B63C9</color>
+    <color name="eclipse_on_primary">#FFFFFF</color>
+    <color name="eclipse_primary_container">#D8E6FB</color>
+    <color name="eclipse_on_primary_container">#06284F</color>
+
+    <!-- Secondary: blue-gray / pearl -->
+    <color name="eclipse_secondary">#52627A</color>
+    <color name="eclipse_on_secondary">#FFFFFF</color>
+    <color name="eclipse_secondary_container">#E3E8F0</color>
+    <color name="eclipse_on_secondary_container">#18222F</color>
+
+    <!-- Tertiary: sky blue -->
+    <color name="eclipse_tertiary">#0B6E99</color>
+    <color name="eclipse_on_tertiary">#FFFFFF</color>
+    <color name="eclipse_tertiary_container">#D4EEF9</color>
+    <color name="eclipse_on_tertiary_container">#032E41</color>
+
+    <!-- Background and surfaces -->
+    <color name="eclipse_background">#F5F7FB</color>
+    <color name="eclipse_on_background">#182030</color>
+    <color name="eclipse_surface">#FFFFFF</color>
+    <color name="eclipse_on_surface">#182030</color>
+    <color name="eclipse_surface_variant">#E6EAF1</color>
+    <color name="eclipse_on_surface_variant">#454F60</color>
+    <color name="eclipse_outline">#7A869A</color>
+    <color name="eclipse_inverse_surface">#2A3342</color>
+    <color name="eclipse_inverse_on_surface">#F1F4F9</color>
+    <color name="eclipse_inverse_primary">#A9C8F5</color>
+
+    <!-- Error (light) -->
+    <color name="eclipse_error">#B3261E</color>
+    <color name="eclipse_on_error">#FFFFFF</color>
+    <color name="eclipse_error_container">#F9DEDC</color>
+    <color name="eclipse_on_error_container">#410E0B</color>
+
+    <!-- Decorative only (not for text): reserved for the future animated background -->
+    <color name="eclipse_sky">#A9DCF5</color>
+    <color name="eclipse_gradient_top">#FFFFFF</color>
+    <color name="eclipse_gradient_bottom">#EAF3FC</color>
+
+</resources>

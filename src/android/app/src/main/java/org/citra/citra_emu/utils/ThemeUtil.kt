@@ -22,12 +22,16 @@ import org.citra.citra_emu.ui.main.ThemeProvider
 object ThemeUtil {
     const val SYSTEM_BAR_ALPHA = 0.9f
 
+    // Position of the light-only Eclipse theme in the static theme list (first entry, default).
+    private const val ECLIPSE_THEME_INDEX = 0
+
     private val preferences: SharedPreferences get() =
         PreferenceManager.getDefaultSharedPreferences(CitraApplication.appContext)
 
     private fun getSelectedStaticThemeColor(): Int {
         val themeIndex = preferences.getInt(Settings.PREF_STATIC_THEME_COLOR, 0)
         val themes = arrayOf(
+            R.style.Theme_Eclipse,
             R.style.Theme_Citra_Blue,
             R.style.Theme_Citra_Cyan,
             R.style.Theme_Citra_Red,
@@ -41,6 +45,10 @@ object ThemeUtil {
         return themes[themeIndex]
     }
 
+    private fun isEclipseThemeActive(): Boolean =
+        !preferences.getBoolean(Settings.PREF_MATERIAL_YOU, false) &&
+            preferences.getInt(Settings.PREF_STATIC_THEME_COLOR, 0) == ECLIPSE_THEME_INDEX
+
     fun setTheme(activity: AppCompatActivity) {
         setThemeMode(activity)
         if (preferences.getBoolean(Settings.PREF_MATERIAL_YOU, false)) {
@@ -52,16 +60,23 @@ object ThemeUtil {
         // Using a specific night mode check because this could apply incorrectly when using the
         // light app mode, dark system mode, and black backgrounds. Launching the settings activity
         // will then show light mode colors/navigation bars but with black backgrounds.
+        // The light-only Eclipse theme never uses black backgrounds.
         if (preferences.getBoolean(Settings.PREF_BLACK_BACKGROUNDS, false) &&
-            isNightMode(activity)
+            isNightMode(activity) &&
+            !isEclipseThemeActive()
         ) {
             activity.setTheme(R.style.ThemeOverlay_Citra_Dark)
         }
     }
 
     fun setThemeMode(activity: AppCompatActivity) {
-        val themeMode = PreferenceManager.getDefaultSharedPreferences(activity.applicationContext)
-            .getInt(Settings.PREF_THEME_MODE, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        // The Eclipse theme is light-only: ignore the saved and system night mode.
+        val themeMode = if (isEclipseThemeActive()) {
+            AppCompatDelegate.MODE_NIGHT_NO
+        } else {
+            PreferenceManager.getDefaultSharedPreferences(activity.applicationContext)
+                .getInt(Settings.PREF_THEME_MODE, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+        }
         activity.delegate.localNightMode = themeMode
         val windowController = WindowCompat.getInsetsController(
             activity.window,

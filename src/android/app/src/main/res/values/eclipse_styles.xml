@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Shapes -->
+    <style name="ShapeAppearance.Eclipse.Card" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/eclipse_corner_card</item>
+    </style>
+
+    <style name="ShapeAppearance.Eclipse.Tile" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/eclipse_corner_tile</item>
+    </style>
+
+    <style name="ShapeAppearance.Eclipse.Button" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/eclipse_corner_button</item>
+    </style>
+
+    <!-- Soft card: white surface, pearl outline, soft shadow -->
+    <style name="Widget.Eclipse.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/eclipse_surface</item>
+        <item name="cardElevation">@dimen/eclipse_elevation_card</item>
+        <item name="strokeColor">@color/eclipse_surface_variant</item>
+        <item name="strokeWidth">@dimen/eclipse_stroke_width</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Eclipse.Card</item>
+    </style>
+
+    <!-- Square "channel" tile for game covers. Prepared here, applied to the library in Phase 2. -->
+    <style name="Widget.Eclipse.Card.Channel">
+        <item name="cardElevation">@dimen/eclipse_elevation_tile</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Eclipse.Tile</item>
+    </style>
+
+    <!-- Navigation: light surface with soft elevation -->
+    <style name="Widget.Eclipse.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/eclipse_surface</item>
+        <item name="elevation">@dimen/eclipse_elevation_nav</item>
+    </style>
+
+    <style name="Widget.Eclipse.NavigationRail" parent="Widget.Material3.NavigationRailView">
+        <item name="backgroundTint">@color/eclipse_surface</item>
+        <item name="elevation">@dimen/eclipse_elevation_nav</item>
+    </style>
+
+    <!-- Buttons -->
+    <style name="Widget.Eclipse.Button" parent="Widget.Material3.Button">
+        <item name="shapeAppearance">@style/ShapeAppearance.Eclipse.Button</item>
+    </style>
+
+</resources>

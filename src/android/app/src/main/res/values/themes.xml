@@ -2,9 +2,9 @@
 <resources>
 
     <style name="Theme.Citra.Splash.Main" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/citra_surface_blue</item>
+        <item name="windowSplashScreenBackground">@color/eclipse_background</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_citra</item>
-        <item name="postSplashScreenTheme">@style/Theme.Citra.Blue</item>
+        <item name="postSplashScreenTheme">@style/Theme.Eclipse</item>
     </style>
 
     <style name="Theme.Citra" parent="Theme.Material3.DayNight.NoActionBar">

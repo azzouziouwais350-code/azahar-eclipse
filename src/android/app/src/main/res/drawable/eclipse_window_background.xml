@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Soft white-to-pale-blue gradient. Placeholder for the future animated wave background. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="270"
+        android:endColor="@color/eclipse_gradient_bottom"
+        android:startColor="@color/eclipse_gradient_top"
+        android:type="linear" />
+</shape>

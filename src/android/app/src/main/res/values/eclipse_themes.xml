@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Azahar Eclipse theme: white, pearl gray and blue. Light-only by design
+        (light parent, colors defined without night variants).
+    -->
+    <style name="Theme.Eclipse" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Colors -->
+        <item name="colorPrimary">@color/eclipse_primary</item>
+        <item name="colorOnPrimary">@color/eclipse_on_primary</item>
+        <item name="colorPrimaryContainer">@color/eclipse_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/eclipse_on_primary_container</item>
+        <item name="colorSecondary">@color/eclipse_secondary</item>
+        <item name="colorOnSecondary">@color/eclipse_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/eclipse_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/eclipse_on_secondary_container</item>
+        <item name="colorTertiary">@color/eclipse_tertiary</item>
+        <item name="colorOnTertiary">@color/eclipse_on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/eclipse_tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/eclipse_on_tertiary_container</item>
+        <item name="android:colorBackground">@color/eclipse_background</item>
+        <item name="colorOnBackground">@color/eclipse_on_background</item>
+        <item name="colorSurface">@color/eclipse_surface</item>
+        <item name="colorOnSurface">@color/eclipse_on_surface</item>
+        <item name="colorSurfaceVariant">@color/eclipse_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/eclipse_on_surface_variant</item>
+        <item name="colorOutline">@color/eclipse_outline</item>
+        <item name="colorOnSurfaceInverse">@color/eclipse_inverse_on_surface</item>
+        <item name="colorSurfaceInverse">@color/eclipse_inverse_surface</item>
+        <item name="colorPrimaryInverse">@color/eclipse_inverse_primary</item>
+        <item name="colorError">@color/eclipse_error</item>
+        <item name="colorOnError">@color/eclipse_on_error</item>
+        <item name="colorErrorContainer">@color/eclipse_error_container</item>
+        <item name="colorOnErrorContainer">@color/eclipse_on_error_container</item>
+
+        <!-- Window and system bars (same behavior as Theme.Citra) -->
+        <item name="android:windowBackground">@drawable/eclipse_window_background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:enforceStatusBarContrast">false</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+
+        <!-- Components -->
+        <item name="sliderStyle">@style/CitraSlider</item>
+        <item name="materialCardViewStyle">@style/Widget.Eclipse.Card</item>
+        <item name="materialButtonStyle">@style/Widget.Eclipse.Button</item>
+        <item name="bottomNavigationStyle">@style/Widget.Eclipse.BottomNavigation</item>
+        <item name="navigationRailStyle">@style/Widget.Eclipse.NavigationRail</item>
+    </style>
+
+</resources>

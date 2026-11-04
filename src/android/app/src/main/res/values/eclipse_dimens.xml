@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Corner radii -->
+    <dimen name="eclipse_corner_tile">20dp</dimen>
+    <dimen name="eclipse_corner_card">16dp</dimen>
+    <dimen name="eclipse_corner_button">20dp</dimen>
+
+    <!-- Elevations (soft shadows) -->
+    <dimen name="eclipse_elevation_tile">6dp</dimen>
+    <dimen name="eclipse_elevation_card">4dp</dimen>
+    <dimen name="eclipse_elevation_nav">8dp</dimen>
+
+    <!-- Strokes and spacing -->
+    <dimen name="eclipse_stroke_width">1dp</dimen>
+    <dimen name="eclipse_tile_spacing">12dp</dimen>
+
+</resources>
